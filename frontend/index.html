@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processing Web App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Image Processing Web App</h1>
+    </header>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" id="fileInput" name="image" accept=".jpg" />
+      <button type="submit">Upload</button>
+    </form>
+    <form id="resizeForm">
+      <h2>Resize Image</h2>
+      <input
+        type="text"
+        id="imageNameInput"
+        name="imageName"
+        placeholder="Filename"
+        required
+      />
+      <input
+        type="number"
+        id="widthInput"
+        name="width"
+        min="1"
+        placeholder="Width"
+        required
+      />
+      <input
+        type="number"
+        id="heightInput"
+        name="height"
+        min="1"
+        placeholder="Height"
+        required
+      />
+      <button type="submit">Resize</button>
+      <p id="resizeResult"></p>
+    </form>
+    <main>
+      <h2>Image Gallery</h2>
+      <section id="gallery" class="gallery"></section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Seif8911 | Udacity. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
